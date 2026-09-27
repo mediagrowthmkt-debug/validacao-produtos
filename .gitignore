@@ -1,0 +1,10 @@
+api/data/
+products-private/
+produtos-private/
+.env*
+*.pem
+*.key
+*.map
+tokens*.json
+__pycache__/
+.DS_Store

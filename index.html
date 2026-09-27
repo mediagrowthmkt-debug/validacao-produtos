@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://cdn.shopify.com data: blob:; connect-src 'self' https://mediagrowth.com.br http://127.0.0.1:8841; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Revisão dos produtos da loja</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+<header class="hero wrap">
+  <img class="logo" id="logo" alt="">
+  <h1>Revisão dos produtos da loja</h1>
+  <p class="lead" id="lead">Aqui estão todos os produtos que estão hoje no site, com as fotos. Em cada um, é só marcar se fica ou sai e dizer quantas peças você tem. Tudo salva sozinho, pode parar e voltar quando quiser.</p>
+  <div class="steps">
+    <div class="step"><b><span>1</span>Manter ou remover</b><p>Toque em <strong>Manter</strong> se o produto continua à venda, ou em <strong>Remover</strong> se ele deve sair da loja.</p></div>
+    <div class="step"><b><span>2</span>Quantidade em estoque</b><p>Digite quantas peças você tem. Nas roupas, a quantidade vai por tamanho. Não tem mais? Toque em <strong>Não tenho mais</strong>.</p></div>
+    <div class="step"><b><span>3</span>Observação (opcional)</b><p>Algum detalhe? Preço, cor, defeito, foto nova. Escreva na observação do produto.</p></div>
+  </div>
+  <div class="whoami"><label for="who">Seu nome</label><input id="who" placeholder="Ex.: Fernanda" autocomplete="name"></div>
+</header>
+
+<div class="bar">
+  <div class="wrap">
+    <div class="progress"><div class="track"><div class="fill" id="fill"></div></div><div class="txt" id="ptxt"></div></div>
+    <div class="row" id="groups"></div>
+    <div class="row filters" style="margin-top:6px" id="filters"></div>
+  </div>
+</div>
+
+<main class="wrap">
+  <div class="grid" id="grid"></div>
+  <div class="finish" id="finish">
+    <h2>Terminou a revisão?</h2>
+    <p>Quando acabar, toque no botão abaixo. A equipe da MediaGrowth recebe tudo e ajusta o estoque e os produtos no Shopify. Se faltar algum produto, pode voltar e completar depois.</p>
+    <button class="btn" id="done">Terminei a revisão</button>
+    <div class="saved" id="donemsg" style="margin-top:10px"></div>
+  </div>
+</main>
+
+<div class="lb" id="lb">
+  <button class="x" id="lbx" aria-label="Fechar">×</button>
+  <div class="box">
+    <div class="main"><img id="lbimg" alt=""><div class="thumbs" id="lbthumbs"></div></div>
+    <div class="info" id="lbinfo"></div>
+  </div>
+</div>
+
+<script src="config.js?v=2"></script>
+<script src="app.js?v=2"></script>
+</body>
+</html>

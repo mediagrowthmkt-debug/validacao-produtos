@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://cdn.shopify.com data: blob:; connect-src 'self' https://mediagrowth.com.br http://127.0.0.1:8841; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Resultado da revisão</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=1">
+<style>
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:18px 0}
+  .kpi{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px}
+  .kpi b{display:block;font-size:28px;font-family:var(--serif)}
+  .kpi span{color:var(--muted);font-size:13px}
+  table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;font-size:14px}
+  th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+  th{background:#f0ece4;font-weight:600;font-size:13px;position:sticky;top:0}
+  td img{width:54px;height:66px;object-fit:contain;background:#fbfaf7;border-radius:6px}
+  .pill{display:inline-block;border-radius:99px;padding:2px 9px;font-size:12px}
+  .pill.manter{background:var(--brand-soft);color:var(--brand)}
+  .pill.remover{background:var(--red-soft);color:var(--red)}
+  .pill.pend{background:#f1eee8;color:var(--muted)}
+  .var{color:var(--muted);font-size:12.5px}
+  .tools{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+  .scroll{overflow-x:auto}
+</style>
+</head>
+<body>
+<div class="wrap" style="padding-top:26px;padding-bottom:60px">
+  <h1 style="font-family:var(--serif);margin:0" id="h">Resultado da revisão</h1>
+  <div class="var" id="sub"></div>
+  <div class="kpis" id="kpis"></div>
+  <div class="tools" id="tools"></div>
+  <div class="scroll"><table><thead><tr><th></th><th>Produto</th><th>Grupo</th><th>Decisão</th><th>Estoque total</th><th>Por tamanho/cor</th><th>Observação</th></tr></thead><tbody id="tb"></tbody></table></div>
+</div>
+<script src="config.js?v=1"></script>
+<script src="admin.js?v=2"></script>
+</body>
+</html>
