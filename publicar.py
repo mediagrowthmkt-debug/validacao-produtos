@@ -71,8 +71,11 @@ def links(slug):
     k = cofre().get(slug)
     if not k:
         print(f"  (sem chave: rode publicar.py token {slug})"); return
-    print(f"  Cliente : {PAGES}/?c={slug}&k={k['client']}")
-    print(f"  Admin   : {PAGES}/admin.html?c={slug}&k={k['admin']}")
+    seedf = os.path.join(REPO, "clients", f"{slug}.json")
+    cur = os.path.exists(seedf) and json.load(open(seedf, encoding="utf-8")).get("modo") == "curadoria"
+    pg, adm = ("curadoria.html", "curadoria-admin.html") if cur else ("", "admin.html")
+    print(f"  Cliente : {PAGES}/{pg}?c={slug}&k={k['client']}")
+    print(f"  Admin   : {PAGES}/{adm}?c={slug}&k={k['admin']}")
 
 
 def cmd_init():

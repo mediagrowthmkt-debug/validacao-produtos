@@ -1,0 +1,50 @@
+/* Complemento visual do modo curadoria (usa as variáveis do style.css). */
+.kicker{text-transform:uppercase;letter-spacing:.14em;font-size:12.5px;color:var(--brand);margin:0 0 6px;font-weight:600}
+.guia{max-width:1000px;margin:10px auto 26px}
+.guia h2{font-family:var(--serif);font-size:clamp(24px,3vw,32px);text-align:center;margin:10px 0 14px}
+.gkpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+.gkpis div{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px;text-align:center}
+.gkpis b{display:block;font-size:20px;color:var(--brand)}
+.gkpis span{font-size:12.5px;color:var(--muted)}
+.gbox{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);margin-bottom:10px;overflow:hidden}
+.gbox summary{cursor:pointer;padding:14px 18px;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.gbox summary::-webkit-details-marker{display:none}
+.gbox summary::after{content:"+";font-size:20px;color:var(--muted)}
+.gbox[open] summary::after{content:"−"}
+.gbody{padding:0 18px 16px;color:var(--ink);line-height:1.6;font-size:14.5px}
+.gbody p{margin:0 0 10px}
+.gbody ul{margin:0 0 10px;padding-left:20px}
+.gbody li{margin-bottom:5px}
+.gnote{color:var(--muted);font-size:13px}
+.tscroll{overflow-x:auto}
+.gbody table{border-collapse:collapse;width:100%;font-size:13.5px;margin:4px 0 10px}
+.gbody th{background:var(--brand-soft);text-align:left;padding:8px;font-weight:600}
+.gbody td{border-bottom:1px solid var(--line);padding:8px;vertical-align:top}
+.ptags{display:flex;gap:5px;flex-wrap:wrap;margin-top:6px}
+.ptag{font-size:11.5px;background:#f1ede5;border-radius:99px;padding:2px 8px;color:var(--muted)}
+.selo{position:absolute;right:10px;top:10px;font-size:11.5px;border-radius:99px;padding:4px 9px;background:#fff7e6;color:var(--amber);border:1px solid #efd9ad}
+.nums{display:grid;grid-template-columns:1fr 1fr;gap:6px 10px;background:#fbfaf7;border:1px solid var(--line);border-radius:10px;padding:10px}
+.nums div{display:flex;flex-direction:column}
+.nums .big{grid-column:1/-1}
+.nums span{font-size:11.5px;color:var(--muted)}
+.nums b{font-size:15px}
+.nums .big b{font-size:22px;color:var(--ink)}
+.nums b.ok{color:var(--brand)}
+.mini{font-size:12.5px;color:var(--muted);line-height:1.45}
+.sel{min-width:170px;margin-left:8px}
+.lb .info h4{margin:10px 0 2px;font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.lb .info ul{margin:0;padding-left:18px;color:var(--muted);font-size:14px;line-height:1.55}
+.lb .info .why{background:var(--brand-soft);color:var(--ink);border-radius:10px;padding:10px 12px}
+.ficha{border-collapse:collapse;width:100%;font-size:13.5px}
+.ficha th{text-align:left;font-weight:500;color:var(--muted);padding:5px 8px 5px 0;width:44%;vertical-align:top}
+.ficha td{padding:5px 0;border-bottom:1px solid var(--line)}
+@media (max-width:760px){
+  .gkpis{grid-template-columns:repeat(2,1fr)}
+  .nums b{font-size:13.5px}
+  .nums .big b{font-size:18px}
+  .sel{min-width:130px;margin-left:0}
+}
+.onde{font-size:12.5px;line-height:1.45;background:var(--brand-soft);border-radius:8px;padding:6px 9px}
+.onde span{font-weight:600;color:var(--brand)}
+.nums b{white-space:nowrap}
+@media (max-width:760px){.nums{grid-template-columns:1fr;gap:4px}.nums b{white-space:normal}.onde{font-size:11.5px}}

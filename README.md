@@ -17,3 +17,10 @@ Salva sozinho, pode parar e voltar. Evita abrir produto por produto no Shopify.
 - Backend `api/api.php` na Hostinger (`mediagrowth.com.br/produtos-api/`), estado por slug em `data/<slug>.json`, trava de arquivo, rate limit.
 - Teste local: `php -S 127.0.0.1:8841` e abrir `/?c=<slug>&api=http://127.0.0.1:8841/api/api.php`.
 - Regerar o seed não apaga respostas (estado casa pelo ID do produto/variação do Shopify).
+
+## Modo curadoria (loja nova: o cliente escolhe o que vender)
+Página `curadoria.html?c=<slug>&k=<chave>` (painel interno `curadoria-admin.html`). Mesmo backend: decisão `manter` = Vender, `remover` = Não vender; o `pid` é o código numérico do produto no fornecedor.
+- Topo com guia colapsável (como funciona, fornecedor, custos, preço e lucro, concorrência, prazos, cuidados, pendências) vindo de `seed.guia`.
+- Card com preço sugerido, custo total, lucro e margem; galeria com a conta completa e a ficha do produto.
+- Seed gerado pela @mary: `clientes/07_mediagrowth/scripts/mary-shopify/homeroots.py coletar` (candidatos do fornecedor) → `montar_curadoria.py <candidatos> <config>` (pontua, precifica, baixa as fotos pra `produtos/<slug>/` e grava `clients/<slug>.json`).
+- Fotos hospedadas no próprio repo (CSP `img-src 'self'`).
